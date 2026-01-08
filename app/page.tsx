@@ -85,61 +85,36 @@ type Skill =
   | "Writing"
   | "Looking Back + Project-based Learning";
 
+/* ================== PAGE ================== */
 export default function Home() {
   const [grade, setGrade] = useState("6");
   const [unit, setUnit] = useState("");
   const [skill, setSkill] = useState<Skill>("Vocabulary");
   const [copied, setCopied] = useState(false);
 
+  const taskBySkill: Record<Skill, string> = {
+    Vocabulary:
+      "Create a VOCABULARY WORKSHEET with visuals and practice activities.",
+    Grammar:
+      "Create a GRAMMAR PRACTICE WORKSHEET with explanation and exercises.",
+    Reading:
+      "Create a READING COMPREHENSION WORKSHEET with pre/while/post tasks.",
+    Speaking:
+      "Create a SPEAKING ACTIVITY with prompts, pair/group work.",
+    Writing:
+      "Create a WRITING TASK with guidance, sentence starters, checklist.",
+    "Looking Back + Project-based Learning":
+      "Create a REVIEW and PROJECT-BASED LEARNING task.",
+  };
+
   const generateAndCopyPrompt = async () => {
     if (!unit) {
-      alert("Please select a unit.");
+      alert("⚠️ Vui lòng chọn Unit trước.");
       return;
     }
 
-    const taskBySkill: Record<Skill, string> = {
-      Vocabulary: `
-Create a VOCABULARY WORKSHEET.
-Include a vocabulary box, visual support, and practice activities
-(matching, fill in the blanks, multiple choice, odd one out).
-Assessment focus: word recognition, meaning, contextual use.
-`,
-      Grammar: `
-Create a GRAMMAR PRACTICE WORKSHEET.
-Include a short explanation, examples, and exercises
-(MCQs, sentence completion, error correction, transformation).
-Assessment focus: form, meaning, usage.
-`,
-      Reading: `
-Create a READING COMPREHENSION WORKSHEET.
-Include a short text, pre-reading, while-reading, and post-reading tasks.
-Assessment focus: main ideas, details, inference.
-`,
-      Speaking: `
-Create a SPEAKING ACTIVITY.
-Include pair/group instructions, sentence starters, prompts or role-play.
-Assessment focus: fluency, pronunciation, relevance.
-`,
-      Writing: `
-Create a WRITING TASK.
-Include clear purpose, structure guidance, sentence starters, word limit.
-Assessment focus: content, organization, accuracy.
-`,
-      "Looking Back + Project-based Learning": `
-Create a REVIEW AND PROJECT-BASED TASK.
-Include revision activities and a small group project with a simple rubric.
-Assessment focus: language use, content, creativity, teamwork.
-`,
-    };
-
     const prompt = `
-You are Mr. Cảnh’s AI teaching assistant, specializing in the design of high-quality
-visual and interactive learning materials for lower secondary English students
-(Grades 6–9) in Vietnam.
-
-Aligned with the MOET Global Success curriculum (CTGDPT 2018),
-focusing on in-depth language knowledge, systematic textbook exploration,
-and higher-order thinking skills.
+You are Mr. Cảnh’s AI teaching assistant for Vietnamese lower secondary students.
 
 GRADE: ${grade}
 SUBJECT: English (Lower Secondary – Vietnam)
@@ -149,39 +124,44 @@ SKILL FOCUS: ${skill}
 TASK:
 ${taskBySkill[skill]}
 
-DESIGN & INTERACTION:
-- Age-appropriate language
-- Clear, student-friendly layout
-- Suitable for Canva AI and Canva Code
-- Explanations before practice
-- Interactive quiz elements
-
-TEACHER INFO:
-Name: CANH IT
-Contact: 0988809539
-
-FEEDBACK:
-Correct → GREEN (✓)
-Incorrect → RED (✗)
-Use encouraging messages and allow retries.
-
-USAGE:
-Classroom teaching, homework assignments,
-and self-study on phone or laptop.
+Design student-friendly, visual materials aligned with MOET Global Success.
 `.trim();
 
     await navigator.clipboard.writeText(prompt);
     setCopied(true);
-    setTimeout(() => setCopied(false), 2500);
+
+    alert(
+      "✅ Prompt đã được sao chép!\n\n" +
+        "Trong Canva AI Code:\n" +
+        "👉 Click vào ô nhập\n" +
+        "👉 Nhấn Ctrl + V (Cmd + V trên Mac)\n" +
+        "👉 Nhấn Generate"
+    );
+
+    window.open("https://www.canva.com/ai/code", "_blank");
   };
 
   return (
     <main style={{ maxWidth: 960, margin: "40px auto", fontFamily: "Arial" }}>
       {/* HEADER */}
       <header style={{ textAlign: "center", marginBottom: 30 }}>
-        <h2>PTDTBT TH & THCS Ba Trang</h2>
-        <p>Xã Đặng Thùy Trâm, Quảng Ngãi</p>
-        <h1>🎓 Mr. Cảnh’s Canva AI Teaching Assistant</h1>
+        <h2 style={{ color: "#dc2626", fontWeight: 700 }}>
+          Trường PTDTBT TH & THCS Ba Trang
+        </h2>
+
+        <p style={{ color: "#374151" }}>
+          Xã Đặng Thùy Trâm, Quảng Ngãi
+        </p>
+
+        <h1
+          style={{
+            color: "#facc15",
+            fontWeight: 800,
+            textShadow: "1px 1px 2px rgba(0,0,0,0.25)",
+          }}
+        >
+          🎓 Mr. Cảnh’s Canva AI Teaching Assistant
+        </h1>
       </header>
 
       {/* GRADE */}
@@ -192,7 +172,7 @@ and self-study on phone or laptop.
           setGrade(e.target.value);
           setUnit("");
         }}
-        style={{ width: "100%", padding: 8 }}
+        style={{ width: "100%", padding: 10 }}
       >
         <option value="6">Grade 6</option>
         <option value="7">Grade 7</option>
@@ -201,11 +181,11 @@ and self-study on phone or laptop.
       </select>
 
       {/* UNIT */}
-      <label style={{ display: "block", marginTop: 12 }}>Unit</label>
+      <label style={{ display: "block", marginTop: 14 }}>Unit</label>
       <select
         value={unit}
         onChange={(e) => setUnit(e.target.value)}
-        style={{ width: "100%", padding: 8 }}
+        style={{ width: "100%", padding: 10 }}
       >
         <option value="">-- Select a unit --</option>
         {unitsByGrade[grade].map((u) => (
@@ -216,26 +196,23 @@ and self-study on phone or laptop.
       </select>
 
       {/* SKILL */}
-      <label style={{ display: "block", marginTop: 12 }}>Skill Focus</label>
+      <label style={{ display: "block", marginTop: 14 }}>Skill Focus</label>
       <select
         value={skill}
         onChange={(e) => setSkill(e.target.value as Skill)}
-        style={{ width: "100%", padding: 8 }}
+        style={{ width: "100%", padding: 10 }}
       >
-        <option>Vocabulary</option>
-        <option>Grammar</option>
-        <option>Reading</option>
-        <option>Speaking</option>
-        <option>Writing</option>
-        <option>Looking Back + Project-based Learning</option>
+        {(Object.keys(taskBySkill) as Skill[]).map((s) => (
+          <option key={s}>{s}</option>
+        ))}
       </select>
 
       {/* BUTTON */}
       <button
         onClick={generateAndCopyPrompt}
         style={{
-          marginTop: 24,
-          padding: "14px 26px",
+          marginTop: 28,
+          padding: "16px",
           fontSize: 16,
           background: copied ? "#16a34a" : "#1e3a8a",
           color: "white",
@@ -244,7 +221,9 @@ and self-study on phone or laptop.
           width: "100%",
         }}
       >
-        {copied ? "✔ PROMPT COPIED – PASTE INTO CANVA" : "GENERATE & COPY PROMPT"}
+        {copied
+          ? "✔ PROMPT ĐÃ COPY – DÁN VÀO CANVA"
+          : "GENERATE LESSON & OPEN CANVA"}
       </button>
     </main>
   );
