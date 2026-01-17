@@ -93,8 +93,16 @@ export default function Home() {
   const [copied, setCopied] = useState(false);
 
   const taskBySkill: Record<Skill, string> = {
-    Vocabulary:
-      "Create a VOCABULARY WORKSHEET with visuals and practice activities.",
+    Vocabulary: `Create a VOCABULARY WORKSHEET with visuals and practice activities.
+
+Yêu cầu:
+- 10 từ vựng, mỗi từ có: phiên âm IPA, nghĩa tiếng Việt, câu ví dụ, nút 🔊 để nghe phát âm và icon minh họa sinh động.
+
+3 hoạt động luyện tập:
+1) Nối từ – Nối từ tiếng Anh với nghĩa tiếng Việt.
+2) Điền từ – Điền từ vào chỗ trống trong câu.
+3) Trắc nghiệm – 10 câu hỏi kiểm tra kiến thức.`,
+
     Grammar:
       "Create a GRAMMAR PRACTICE WORKSHEET with explanation and exercises.",
     Reading:
