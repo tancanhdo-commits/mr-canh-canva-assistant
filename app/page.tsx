@@ -156,10 +156,9 @@ Design student-friendly, visual materials aligned with MOET Global Success.
         <h2 style={{ color: "#7526dc", fontWeight: 700 }}>
         Giáo viên: Đỗ Tấn Cảnh-0988809539
          <p style={{ color: "#8ca326" }}></p>
-          Trường PTDTBT TH & THCS Ba Trang
+          ❤️ Trường PTDTBT TH & THCS Ba Trang❤️
         </h2>
-
-        <p style={{ color: "#d81e28" }}>
+        <p style={{ color: "#d81e84" }}>
           Xã Đặng Thùy Trâm, Quảng Ngãi
         </p>
 
@@ -171,6 +170,7 @@ Design student-friendly, visual materials aligned with MOET Global Success.
           }}
         >
           🎓 Mr. Cảnh’s Canva AI Teaching Assistant
+         ❤️English is taught, but love is shared!❤️
         </h1>
       </header>
 
