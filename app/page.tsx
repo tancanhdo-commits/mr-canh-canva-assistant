@@ -153,9 +153,9 @@ Design student-friendly, visual materials aligned with MOET Global Success.
     <main style={{ maxWidth: 960, margin: "40px auto", fontFamily: "Arial" }}>
       {/* HEADER */}
       <header style={{ textAlign: "center", marginBottom: 30 }}>
-        <h2 style={{ color: "#dc2626", fontWeight: 700 }}>
+        <h2 style={{ color: "#7526dc", fontWeight: 700 }}>
         Giáo viên: Đỗ Tấn Cảnh-0988809539
-         <p style={{ color: "#5d15e2" }}></p>
+         <p style={{ color: "#8ca326" }}></p>
           Trường PTDTBT TH & THCS Ba Trang
         </h2>
 
