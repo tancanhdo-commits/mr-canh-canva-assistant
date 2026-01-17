@@ -153,13 +153,13 @@ Design student-friendly, visual materials aligned with MOET Global Success.
     <main style={{ maxWidth: 960, margin: "40px auto", fontFamily: "Arial" }}>
       {/* HEADER */}
       <header style={{ textAlign: "center", marginBottom: 30 }}>
-        <h2 style={{ color: "#7526dc", fontWeight: 700 }}>
+        <h2 style={{ color: "#acdc26", fontWeight: 700 }}>
         Giáo viên: Đỗ Tấn Cảnh-0988809539
          <p style={{ color: "#8ca326" }}></p>
           ❤️ Trường PTDTBT TH & THCS Ba Trang❤️
         </h2>
         <p style={{ color: "#d81e84" }}>
-          Xã Đặng Thùy Trâm, Quảng Ngãi
+          Xã Đặng Thùy Trâm, tỉnh Quảng Ngãi
         </p>
 
         <h1
@@ -169,8 +169,8 @@ Design student-friendly, visual materials aligned with MOET Global Success.
             textShadow: "1px 1px 2px rgba(0,0,0,0.25)",
           }}
         >
-          🎓 Mr. Cảnh’s Canva AI Teaching Assistant
-         ❤️English is taught, but love is shared!❤️
+          🎓 Mr. Cảnh’s Canva AI Teaching Assistant<br />
+         ❤️English is taught, love is shared!❤️
         </h1>
       </header>
 
