@@ -155,11 +155,11 @@ Design student-friendly, visual materials aligned with MOET Global Success.
       <header style={{ textAlign: "center", marginBottom: 30 }}>
         <h2 style={{ color: "#dc2626", fontWeight: 700 }}>
         Giáo viên: Đỗ Tấn Cảnh-0988809539
-         <p style={{ color: "#cc2d77" }}></p>
+         <p style={{ color: "#5d15e2" }}></p>
           Trường PTDTBT TH & THCS Ba Trang
         </h2>
 
-        <p style={{ color: "#374151" }}>
+        <p style={{ color: "#d81e28" }}>
           Xã Đặng Thùy Trâm, Quảng Ngãi
         </p>
 
@@ -216,25 +216,24 @@ Design student-friendly, visual materials aligned with MOET Global Success.
           <option key={s}>{s}</option>
         ))}
       </select>
-
-      {/* BUTTON */}
-      <button
-        onClick={generateAndCopyPrompt}
-        style={{
-          marginTop: 28,
-          padding: "16px",
-          fontSize: 16,
-          background: copied ? "#16a34a" : "#1e3a8a",
-          color: "white",
-          border: "none",
-          borderRadius: 6,
-          width: "100%",
-        }}
-      >
-        {copied
-          ? "✔ PROMPT ĐÃ COPY – DÁN VÀO CANVA"
-          : "GENERATE LESSON & OPEN CANVA"}
-      </button>
-    </main>
-  );
+   {/* BUTTON */}
+<button
+  onClick={generateAndCopyPrompt}
+  style={{
+    marginTop: 28,
+    padding: "16px",
+    fontSize: 16,
+    background: copied ? "#16a34a" : "#1e3a8a",
+    color: "white",
+    border: "none",
+    borderRadius: 6,
+    width: "100%",
+  }}
+>
+  {copied
+    ? "✔ PROMPT ĐÃ COPY – MỞ CANVA AI"
+    : "GENERATE LESSON & OPEN CANVA"}
+</button>
+</main>
+);
 }
