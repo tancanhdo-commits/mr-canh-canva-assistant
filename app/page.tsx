@@ -128,13 +128,13 @@ Yêu cầu:
 3) Trắc nghiệm – 10 câu hỏi kiểm tra kiến thức.`,
 
     Grammar:
-      "Create a GRAMMAR PRACTICE WORKSHEET with explanation and exercises.",
+      "Create a GRAMMAR PRACTICE WORKSHEET with explanation and exercises."      ,
     Reading:
       "Create a READING COMPREHENSION WORKSHEET with pre/while/post tasks.",
     Speaking:
       "Create a SPEAKING ACTIVITY with prompts, pair/group work.",
     Writing:
-      "Create a WRITING TASK with guidance, sentence starters, checklist.",
+      "Create a WRITING TASK with guidance, sentence starters, 4 interactive activities with key vocabulary and structures. Sample writing included.",
     "Looking Back + Project-based Learning":
       "Create a REVIEW and PROJECT-BASED LEARNING task.",
   };
@@ -177,10 +177,10 @@ Design student-friendly, visual materials aligned with MOET Global Success.
     <main style={{ maxWidth: 960, margin: "40px auto", fontFamily: "Arial" }}>
       {/* HEADER */}
       <header style={{ textAlign: "center", marginBottom: 30 }}>
-        <h2 style={{ color: "#acdc26", fontWeight: 700 }}>
+        <h2 style={{ color: "#f01356e0", fontWeight: 700 }}>
         Giáo viên: Đỗ Tấn Cảnh-0988809539
          <p style={{ color: "#8ca326" }}></p>
-          ❤️ Trường PTDTBT TH & THCS Ba Trang❤️
+          ❤️ Trường PTDTBT TH & THCS Ba Trang
         </h2>
         <p style={{ color: "#d81e84" }}>
           Xã Đặng Thùy Trâm, tỉnh Quảng Ngãi
@@ -194,7 +194,7 @@ Design student-friendly, visual materials aligned with MOET Global Success.
           }}
         >
           🎓 Mr. Cảnh’s Canva AI Teaching Assistant<br />
-         ❤️English is taught, love is shared!❤️
+         English is taught, love is shared!❤️
         </h1>
       </header>
 
