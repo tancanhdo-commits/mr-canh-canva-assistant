@@ -1,5 +1,29 @@
 "use client";
 import { useState } from "react";
+/* ================== UI HELPERS ================== */
+function Card({
+  title,
+  children
+}: {
+  title: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <div
+      style={{
+        marginBottom: 24,
+        padding: 24,
+        borderRadius: 20,
+        background: "rgba(255,255,255,0.08)"
+      }}
+    >
+      <h2 style={{ fontSize: 22, fontWeight: 700, color: "#80d8ff" }}>
+        {title}
+      </h2>
+      <div style={{ marginTop: 16 }}>{children}</div>
+    </div>
+  );
+}
 
 /* ================== UNIT DATA BY GRADE ================== */
 const unitsByGrade: Record<string, string[]> = {
